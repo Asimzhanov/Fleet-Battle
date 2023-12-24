@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fleet Battle</title>
+	<style type="text/css">
+		.ar {
+			background: grey;
+			height: 100px;
+			width: 100px;
+			margin-top: 2px;
+			margin-left: 2px;		}
+
+		.txt {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		font-family: Arial;
+		font-size: 20px;
+		}
+	</style>
+</head>
+<body style="text-align: center;">
+	<h1>Fleet Battle!</h1>
+	<h1 class="b3 txt"> 3 cell green ship - 2</h1>
+	<h1 class="b4 txt"> 4 cell red ship - 1</h1>
+	<h1 class="b1 txt"> 1 cell yellow ship - 4</h1>
+	<h1 class="b2 txt"> 2 cell purple ship - 2</h1>
+	<h1>Score: <span class="pointer">0</span></h1>
+
+<div style="display: flex;">
+	<div class="ar"></div>
+	<div class="ar"> 1 </div>
+	<div class="ar"> 2 </div>
+	<div class="ar"> 3 </div>
+	<div class="ar"> 4 </div>
+	<div class="ar"> 5 </div>
+	<div class="ar"> 6 </div>
+	<div class="ar"> 7 </div>
+	<div class="ar"> 8 </div>
+	<div class="ar"> 9 </div>
+	<div class="ar"> 10 </div>
+</div>
+	
+<div style="display: flex;">
+	<div class="ar"> A </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar green"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar red"></div>
+	<div class="ar red"></div>
+	<div class="ar red"></div>
+	<div class="ar red"></div>
+	<div class="ar"></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> B </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar green"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> C </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar green"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar yellow"></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> D </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar purple"></div>
+	<div class="ar purple"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> E </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> F </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar green"></div>
+	<div class="ar green"></div>
+	<div class="ar green"></div>
+	<div class="ar"></div>
+	<div class="ar yellow"></div>
+	<div class="ar"></div>
+	<div class="ar "></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> G </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar yellow"></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> H </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> I </div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar purple"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+</div>
+
+<div style="display: flex;">
+	<div class="ar"> J </div>
+	<div class="ar"></div>
+	<div class="ar yellow"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+	<div class="ar purple"></div>
+	<div class="ar"></div>
+	<div class="ar"></div>
+</div>
+
+
+<script type="text/javascript">
+	let red = document.querySelectorAll(".red")
+	let yellow = document.querySelectorAll(".yellow")
+	let green = document.querySelectorAll(".green")
+	let purple = document.querySelectorAll(".purple")
+	let score = 0;
+
+	let txt = document.querySelector(".b4")
+	let txt1 = document.querySelector(".b3")
+	let txt2 = document.querySelector(".b2")
+	let txt3 = document.querySelector(".b1")
+
+	let redship = 0;
+	let yellowship = 0;
+	let greenship = 0;
+	let purpleship = 0;
+
+	for (let x=0; x<4; x=x+1) {
+		red[x].onclick = function() {
+			score = score + 1;
+			redship = redship + 1;
+			document.querySelector(".pointer").innerHTML = score;
+			red[x].style.background = "red"
+
+			red[x].onclick = null
+
+			if (redship == 4) {
+				txt.innerHTML = "4 cell red ship - 0";
+				txt.style.textDecoration = "line-through";
+			}
+				if (score == 18) {
+					alert("You won!")
+				}
+		}
+	}
+
+
+	for (let x=0; x<4; x=x+1) {
+		yellow[x].onclick = function() {
+			score = score + 1;
+			yellowship = yellowship + 1;
+			document.querySelector(".pointer").innerHTML = score;
+			yellow[x].style.background = "yellow"
+
+			yellow[x].onclick = null
+
+				if (yellowship == 1) {
+					txt3.innerHTML = "1 cell yellow ship - 3";
+				}
+			if (yellowship == 2) {
+				txt3.innerHTML = "1 cell yellow ship - 2";
+			}
+				if (yellowship == 3) {
+					txt3.innerHTML = "1 cell yellow ship - 1";
+				}
+			if (yellowship == 4) {
+				txt3.innerHTML = "1 cell yellow ship - 0";
+				txt3.style.textDecoration = "line-through";
+			}
+				if (score == 18) {
+					alert("You won!")
+				}
+		}
+	}
+
+	for (let x=0; x<6; x=x+1) {
+		green[x].onclick = function() {
+			score = score + 1;
+			greenship = greenship + 1;
+		document.querySelector(".pointer").innerHTML = score;
+			green[x].style.background = "green"
+
+			green[x].onclick = null
+
+				if (greenship == 3) {
+					txt1.innerHTML = "3 cell green ship - 1";
+				}
+			if (greenship == 6) {
+				txt1.innerHTML = "3 cell green ship - 0";
+				txt1.style.textDecoration = "line-through";
+			}
+				if (score == 18) {
+					alert("You won!")
+				}
+		}
+	}
+
+	for (let x=0; x<4; x=x+1) {
+		purple[x].onclick = function() {
+			score = score + 1;
+			purpleship = purpleship + 1;
+			document.querySelector(".pointer").innerHTML = score;
+			purple[x].style.background = "purple"
+
+			purple[x].onclick = null
+
+				if (purpleship == 2) {
+					txt2.innerHTML = "2 cell purple ship - 1";
+				}
+			if (purpleship == 4) {
+				txt2.innerHTML = "2 cell purple ship - 0";
+				txt2.style.textDecoration = "line-through";
+			}
+			if (score >= 18) {
+				alert("You won!")
+			}
+		}
+	}
+	</script>
+</body>
+</html>
